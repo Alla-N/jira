@@ -12,10 +12,7 @@ export class MainComponent implements OnInit {
   todoList: Todo[];
   showList: Todo[];
   filter: string;
-  @Output()
-  accordionState = {
-    step: -1
-  };
+  step = -1;
 
   @Input() search;
 

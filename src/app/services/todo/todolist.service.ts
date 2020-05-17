@@ -7,8 +7,8 @@ import Todo from './Todo';
 const httpOptions = {
   headers: new HttpHeaders({'Content-type': 'application/json'})
 };
-const url = 'http://localhost:8080/';
-// const url = '';
+// const url = 'http://localhost:8080/';
+const url = '';
 
 @Injectable({
   providedIn: 'root'

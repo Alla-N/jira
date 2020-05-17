@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable} from "rxjs";
-import Todo from "../todo/Todo";
+import {BehaviorSubject, Observable} from 'rxjs';
+import {StoreService} from '../store/store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,14 +8,16 @@ import Todo from "../todo/Todo";
 export class FilterService {
   filter = new BehaviorSubject('');
 
-  constructor() { }
-
-  getFilter(): Observable<any> {
-    return this.filter;
+  constructor(private storeService: StoreService) {
   }
 
-  setFilter(value) {
-    this.filter.next(value);
+  getFilter(): Observable<any> {
+    return this.filter.asObservable();
+  }
+
+  setFilter(id) {
+    this.filter.next(id);
+    this.storeService.setActiveFilter(id);
   }
 
 }

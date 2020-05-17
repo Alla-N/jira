@@ -15,7 +15,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { HomeComponent } from './components/home/home.component';
 import { TaskComponent } from './components/task/task.component';
 import { CreateComponent } from './components/create/create.component';
-import { AsideComponent } from './components/aside/aside.component';
+import { FiltersComponent } from './components/filters/filters.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { EditComponent } from './components/edit/edit.component';
@@ -24,7 +24,7 @@ import { TodoListService } from './services/todo/todolist.service';
 import { StoreService } from './services/store/store.service';
 import { UserService } from './services/user/user.service';
 
-import { TodosSearchPipe } from './pipes/filter.pipe';
+import { TodosSearchPipe } from './pipes/search.pipe';
 import { AuthGuard } from './helpers/auth.guard';
 
 
@@ -33,7 +33,7 @@ import { AuthGuard } from './helpers/auth.guard';
     AppComponent,
     TaskComponent,
     CreateComponent,
-    AsideComponent,
+    FiltersComponent,
     HeaderComponent,
     MainComponent,
     EditComponent,
