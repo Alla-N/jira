@@ -1,0 +1,26 @@
+.main {
+  margin-bottom: 3rem;
+
+  mat-sidenav-container {
+    min-height: 80vh;
+  }
+
+  &_container {
+    height: 100%;
+  }
+
+  &_left,
+  &_right {
+    padding: 16px;
+  }
+
+  &_left {
+    background-color: #fafafa;
+    width: 300px;
+  }
+
+  &_right {
+    background-color: #fff;
+  }
+}
+

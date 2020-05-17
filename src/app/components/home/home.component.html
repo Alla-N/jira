@@ -1,0 +1,14 @@
+<div>
+  <app-header  [(opened)]="opened" (searchChange)="onSearch($event)" ></app-header>
+  <div class="main"  #wrapper>
+    <mat-sidenav-container class="main_container">
+      <mat-sidenav #sidenav [(opened)] = "opened" mode="side" class="main_left">
+        <app-aside></app-aside>
+      </mat-sidenav>
+      <mat-sidenav-content class="main_right">
+        <app-main [search]="search"></app-main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
+

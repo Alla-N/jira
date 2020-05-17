@@ -1,0 +1,24 @@
+<div class="navigation">
+  <mat-toolbar color="accent" class="navigation_block">
+    <div>
+      <button (click)="toggleSideBar()" mat-button class="navigation_button">
+        <mat-icon matTooltip="Toggle sidebar">menu</mat-icon>
+      </button>
+      <mat-form-field floatLabel="never">
+        <mat-label class="form_label">Search</mat-label>
+        <input type="text" matInput (input) = onSearch($event)  />
+        <mat-icon>search</mat-icon>&nbsp;&nbsp;
+      </mat-form-field>
+    </div>
+    <div class="navigation_buttonsBlock">
+      <button mat-button (click)="createTask()" class="navigation_button">
+        <mat-icon matTooltip="Create new task">
+          add_circle_outline
+        </mat-icon>
+      </button>
+      <button mat-button (click)="logout()" class="navigation_button">
+        Logout
+      </button>
+    </div>
+  </mat-toolbar>
+</div>
