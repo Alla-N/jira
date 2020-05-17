@@ -66,7 +66,9 @@ export class StoreService {
     this.todoService.addTodo(todo)
       .subscribe(data => {
         this.messages.next(data.message);
-        this.todoList.next([...this.todoList.getValue(), data.todo]);
+        const newTask = data.todo;
+        newTask.deadline = new Date(data.todo.deadline);
+        this.todoList.next([...this.todoList.getValue(), newTask]);
       });
   }
 
